@@ -8,4 +8,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="leagues_name">Add Team</string>
+    <string name="tab_text_1">FEATURED</string>
+    <string name="tab_text_2">CATEGORIES</string>
+    <string name="tab_text_3">MANAGE</string>
 </resources>
