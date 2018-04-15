@@ -71,7 +71,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="dp"
+                        android:layout_marginLeft="0dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="12dp"
                         android:src="@drawable/ic_ok1"
