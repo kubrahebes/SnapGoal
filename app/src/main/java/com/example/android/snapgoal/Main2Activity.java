@@ -3,7 +3,6 @@ package com.example.android.snapgoal;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -14,9 +13,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.android.snapgoal.fragment.GuessFragment;
 import com.example.android.snapgoal.fragment.LeaguesFragment;
@@ -40,11 +37,8 @@ public class Main2Activity extends AppCompatActivity {
     Button shareBtn;
     @BindView(R.id.setBtn)
     Button setBtn;
-
     @BindView(R.id.tabbar)
     TabLayout tabbar;
-    @BindView(R.id.relativBottom)
-    RelativeLayout relativBottom;
 
     private TextView mTextMessage;
     Fragment fragment;
@@ -96,7 +90,7 @@ public class Main2Activity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         //fragment ayarları
-        final BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        //  final BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         // navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         //fragmentManager = getFragmentManager();
         //fragment = new SnapMeFragment();
@@ -123,18 +117,18 @@ public class Main2Activity extends AppCompatActivity {
             public void onPageSelected(int position) {
                 switch (position) {
                     case 0:
-                   relativBottom.setVisibility(View.GONE);
+
                         break;
                     case 1:
-                        relativBottom.setVisibility(View.GONE);
+
                         break;
 
                     case 2:
-                       relativBottom.setVisibility(View.GONE);
+
 
                         break;
                     case 3:
-                    relativBottom.setVisibility(View.GONE);
+
                         break;
                 }
             }
@@ -154,7 +148,6 @@ public class Main2Activity extends AppCompatActivity {
         tabbar.getTabAt(3).setIcon(tabIcons[3]);
 
     }
-
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         public SectionsPagerAdapter(FragmentManager fm) {
@@ -198,15 +191,12 @@ public class Main2Activity extends AppCompatActivity {
             case R.id.searchBtn:
                 Intent intent2 = new Intent(Main2Activity.this, LeaguesFragment.class);
                 startActivity(intent2);
-                break;
+
             case R.id.alarmBtn:
-                Intent intent = new Intent(Main2Activity.this, GuessFragment.class);
-                startActivity(intent);
                 break;
             case R.id.shareBtn:
                 break;
             case R.id.setBtn:
-                Toast.makeText(this, "blablanlaa", Toast.LENGTH_SHORT).show();
                 Intent intent1 = new Intent(Main2Activity.this, SettingActivity.class);
                 startActivity(intent1);
         }

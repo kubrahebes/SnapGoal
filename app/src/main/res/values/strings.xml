@@ -11,4 +11,6 @@
     <string name="tab_text_1">FEATURED</string>
     <string name="tab_text_2">CATEGORIES</string>
     <string name="tab_text_3">MANAGE</string>
+    <string name="settingPage">Settings</string>
+    <string name="teamAdd">Team Add</string>
 </resources>

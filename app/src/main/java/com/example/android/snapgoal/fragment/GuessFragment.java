@@ -32,7 +32,7 @@ public class GuessFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View rootView = inflater.inflate(R.layout.guess_fragment, container, false);
+        final View rootView = inflater.inflate(R.layout.fragment_guess, container, false);
         unbinder = ButterKnife.bind(this, rootView);
 
 

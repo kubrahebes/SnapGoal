@@ -40,7 +40,7 @@ public class VideoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View rootView = inflater.inflate(R.layout.video_fragment, container, false);
+        final View rootView = inflater.inflate(R.layout.fragment_video, container, false);
 
         unbinder = ButterKnife.bind(this, rootView);
         ArrayList<Video> arrayList = new ArrayList<>();

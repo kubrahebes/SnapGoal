@@ -12,14 +12,22 @@
             android:name=".Main2Activity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
+
+        </activity>
+        <activity
+            android:name=".SettingActivity"
+            android:label="@string/settingPage"
+            android:theme="@style/mainStyle" />
+        <activity android:name=".LeaguesActivity"
+            android:label="@string/teamAdd"
+            android:theme="@style/mainStyle">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".SettingActivity"
-            android:theme="@style/mainStyle"></activity>
     </application>
 
 </manifest>

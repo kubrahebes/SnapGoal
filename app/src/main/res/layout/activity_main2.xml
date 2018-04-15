@@ -56,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="5dp"
-                android:background="@drawable/ic_magnifying_glass" />
+                android:background="@drawable/ic_magnifying_glass_1" />
 
             <Button
                 android:id="@+id/alarmBtn"
@@ -64,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="5dp"
-                android:background="@drawable/ic_bell_1" />
+                android:background="@drawable/ic_alarm" />
 
             <Button
                 android:id="@+id/shareBtn"
@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="5dp"
-                android:background="@drawable/ic_share_content" />
+                android:background="@drawable/ic_share_3" />
 
             <Button
                 android:id="@+id/setBtn"
@@ -354,21 +354,6 @@
     </RelativeLayout>
 
 
-    <RelativeLayout
 
-        android:id="@+id/relativBottom"
-        android:layout_width="match_parent"
-        android:visibility="gone"
-        android:layout_height="match_parent">
-
-        <android.support.design.widget.BottomNavigationView
-            android:id="@+id/navigation"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_alignParentBottom="true"
-
-            app:menu="@menu/navigation" />
-
-    </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>
