@@ -106,7 +106,7 @@
                     app:expandedTitleMarginStart="48dp"
                     app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-                    <FrameLayout
+                    <RelativeLayout
                         android:id="@+id/frame"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -294,6 +294,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="50dp"
                                     android:layout_below="@id/view"
+
                                     android:layout_marginBottom="0dp"
                                     app:layout_anchor="@+id/appbar"
                                     app:layout_anchorGravity="bottom"
@@ -331,7 +332,7 @@
                         </RelativeLayout>
 
 
-                    </FrameLayout>
+                    </RelativeLayout>
 
                     <android.support.v7.widget.Toolbar
                         android:id="@+id/toolbar"

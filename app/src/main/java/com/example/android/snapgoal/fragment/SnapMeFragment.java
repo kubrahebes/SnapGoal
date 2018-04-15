@@ -1,7 +1,9 @@
 package com.example.android.snapgoal.fragment;
 
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +26,12 @@ public class SnapMeFragment extends Fragment {
     @BindView(R.id.listView)
     ListView listView;
     Unbinder unbinder;
+
+    @BindView(R.id.tabbar)
+    TabLayout tabbar;
+    @BindView(R.id.viewPager)
+    ViewPager viewPager;
+
 
     public SnapMeFragment() {
 
@@ -51,7 +59,7 @@ public class SnapMeFragment extends Fragment {
 
         SnapMeAdapter adapter = new SnapMeAdapter(rootView.getContext(), arrayList);
         listView.setAdapter(adapter);
-
+tabbar.setSelectedTabIndicatorHeight(0);
         return rootView;
     }
 
