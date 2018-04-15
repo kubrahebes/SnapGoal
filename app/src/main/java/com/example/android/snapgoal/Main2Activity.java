@@ -1,18 +1,19 @@
 package com.example.android.snapgoal;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.TabItem;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,56 +40,54 @@ public class Main2Activity extends AppCompatActivity {
     Button shareBtn;
     @BindView(R.id.setBtn)
     Button setBtn;
-    @BindView(R.id.snapMeRelativ)
-    RelativeLayout snapMeRelativ;
-    @BindView(R.id.videRelativ)
-    RelativeLayout videRelativ;
-    @BindView(R.id.guessRelativ)
-    RelativeLayout guessRelativ;
-    @BindView(R.id.postRelativ)
-    RelativeLayout postRelativ;
-    @BindView(R.id.snapMeBtn)
-    ImageView snapMeBtn;
-    @BindView(R.id.videoBtn)
-    ImageView videoBtn;
-    @BindView(R.id.guessBtn)
-    ImageView guessBtn;
-    @BindView(R.id.postBtn)
-    ImageView postBtn;
+
+    @BindView(R.id.tabbar)
+    TabLayout tabbar;
+    @BindView(R.id.relativBottom)
+    RelativeLayout relativBottom;
+
     private TextView mTextMessage;
     Fragment fragment;
-    FragmentManager fragmentManager;
+    android.app.FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+    /* private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    fragment = new SnapMeFragment();
+         @Override
+         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+             switch (item.getItemId()) {
+                 case R.id.navigation_home:
+                     fragment = new SnapMeFragment();
 
-                    break;
-                case R.id.navigation_dashboard:
-                    fragment = new VideoFragment();
+                     break;
+                 case R.id.navigation_dashboard:
+                     fragment = new VideoFragment();
 
-                    break;
-                case R.id.navigation_notifications:
-                    fragment = new PostFragment();
+                     break;
+                 case R.id.navigation_notifications:
+                     fragment = new PostFragment();
 
-                    break;
+                     break;
 
 
+             }
 
-            }
+             //    fragmentTransaction = fragmentManager.beginTransaction();
+             fragmentTransaction.replace(R.id.content1, fragment).commit();
+             return true;
+         }
 
-            fragmentTransaction = fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.content1, fragment).commit();
-            return true;
-        }
+     };*/
+    private int[] tabIcons = {
+            R.drawable.ic_football,
+            R.drawable.ic_video,
+            R.drawable.ic_two_dices_2,
+            R.drawable.ic_post
 
     };
+    TabItem snapMeTab, videoTab, guessTab, postTab;
+    SectionsPagerAdapter mSectionsPagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,16 +96,101 @@ public class Main2Activity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         //fragment ayarları
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        fragmentManager = getFragmentManager();
-        fragment = new SnapMeFragment();
+        final BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        // navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        //fragmentManager = getFragmentManager();
+        //fragment = new SnapMeFragment();
 
 
-        fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.content1, fragment).commit();
+        //   fragmentTransaction = fragmentManager.beginTransaction();
+//        fragmentTransaction.replace(R.id.content1, fragment).commit();
+
+        snapMeTab = findViewById(R.id.snapMeTab);
+        videoTab = findViewById(R.id.videoTab);
+        guessTab = findViewById(R.id.guessTab);
+        postTab = findViewById(R.id.postTab);
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(mSectionsPagerAdapter);
+        tabbar.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(viewPager));
+        setupTabIcons();
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                switch (position) {
+                    case 0:
+                   relativBottom.setVisibility(View.GONE);
+                        break;
+                    case 1:
+                        relativBottom.setVisibility(View.GONE);
+                        break;
+
+                    case 2:
+                       relativBottom.setVisibility(View.GONE);
+
+                        break;
+                    case 3:
+                    relativBottom.setVisibility(View.GONE);
+                        break;
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+
+        });
     }
 
+    private void setupTabIcons() {
+        tabbar.getTabAt(0).setIcon(tabIcons[0]);
+        tabbar.getTabAt(1).setIcon(tabIcons[1]);
+        tabbar.getTabAt(2).setIcon(tabIcons[2]);
+        tabbar.getTabAt(3).setIcon(tabIcons[3]);
+
+    }
+
+    public class SectionsPagerAdapter extends FragmentPagerAdapter {
+
+        public SectionsPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            switch (position) {
+
+                case 0:
+                    SnapMeFragment snapMeFragment = new SnapMeFragment();
+                    return snapMeFragment;
+
+
+                case 1:
+                    VideoFragment videoFragment = new VideoFragment();
+                    return videoFragment;
+                case 2:
+                    GuessFragment guessFragment = new GuessFragment();
+                    return guessFragment;
+                case 3:
+                    PostFragment postFragment = new PostFragment();
+
+                    return postFragment;
+
+                default:
+                    return null;
+            }
+        }
+
+        @Override
+        public int getCount() {
+            return 4;
+        }
+    }
 
     @OnClick({R.id.searchBtn, R.id.alarmBtn, R.id.shareBtn, R.id.setBtn})
     public void onViewClicked(View view) {

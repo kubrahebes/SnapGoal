@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#DDDDDD"
+    android:background="#e9e9e9"
     tools:context=".Main2Activity">
 
     <android.support.v7.widget.CardView
@@ -22,6 +22,7 @@
         <RelativeLayout
             android:id="@+id/relative_layout_one"
             android:layout_width="match_parent"
+
             android:layout_height="match_parent">
 
             <RelativeLayout
@@ -31,12 +32,12 @@
 
                 <ImageView
                     android:id="@+id/team_first_image_view"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="5dp"
-                    android:layout_marginTop="30dp"
-                    android:padding="4dp"
+                    android:layout_marginTop="20dp"
+                    android:padding="1dp"
                     android:src="@drawable/laliga" />
 
 
@@ -47,8 +48,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/team_first_image_view"
-                    android:layout_marginLeft="7dp"
-                    android:layout_marginTop="15dp">
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="10dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -56,7 +57,7 @@
                         android:text="Trend:"
                         android:padding="3dp"
                         android:textColor="#111"
-                        android:textSize="9sp" />
+                        android:textSize="10sp" />
 
                     <TextView
                         android:textColor="#111"
@@ -65,14 +66,14 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:text="%30"
-                        android:textSize="11sp" />
+                        android:textSize="13sp" />
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginLeft="dp"
                         android:layout_marginTop="5dp"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginBottom="12dp"
                         android:src="@drawable/ic_ok1"
 
                         />
@@ -83,7 +84,7 @@
                 android:id="@+id/score_linear_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toLeftOf="@+id/relative_layout_trend_two"
+
                 android:layout_toRightOf="@+id/relative_layout_trend_one">
 
                 <LinearLayout
@@ -118,7 +119,7 @@
                 <TextView
 
                     android:layout_width="18dp"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginTop="15dp"
@@ -144,7 +145,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="3dp"
-                        android:layout_marginLeft="4dp"
+                        android:layout_marginLeft="2dp"
                         android:layout_marginRight="4dp"
                         android:text="1"
                         android:textSize="18sp" />
@@ -169,8 +170,8 @@
                 android:gravity="center">
 
                 <Button
-                    android:layout_width="120dp"
-                    android:layout_height="33dp"
+                    android:layout_width="95dp"
+                    android:layout_height="30dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:background="@drawable/shape3"
@@ -188,12 +189,12 @@
 
                 <ImageView
                     android:id="@+id/team_second_image_view"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginTop="30dp"
-                    android:padding="4dp"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="14dp"
+                    android:padding="2dp"
                     android:src="@drawable/laliga" />
 
 
@@ -205,34 +206,36 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/team_second_image_view"
                     android:layout_marginRight="7dp"
-                    android:layout_marginTop="15dp">
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginTop="11dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Trend:"
+                        android:layout_marginLeft="2dp"
                         android:textColor="#111"
                         android:padding="3dp"
-                        android:textSize="9sp" />
+                        android:textSize="10sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginLeft="3dp"
                         android:text="%30"
                         android:textColor="#111"
                         android:padding="2dp"
-                        android:textSize="11sp" />
+                        android:textSize="13sp" />
 
 
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginLeft="0dp"
                         android:layout_marginTop="0dp"
                         android:src="@drawable/ic_ok2"
-                        android:layout_marginBottom="10sp"
+                        android:layout_marginBottom="12sp"
 
                         />
                 </LinearLayout>
@@ -244,7 +247,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="58dp"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:background="#fff">
 
@@ -271,7 +274,7 @@
         <ImageView
 
             android:id="@+id/send_image_view"
-            android:layout_width="50dp"
+            android:layout_width="40dp"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
             android:layout_marginRight="10dp"

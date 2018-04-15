@@ -17,14 +17,6 @@
         android:icon="@drawable/football_shirt"
         android:title="@string/title_notifications"
      />
-    <item
-        android:id="@+id/navigation_notifications1"
-        android:icon="@drawable/football_shirt"
-        android:title="@string/title_notifications"
-        />
-    <item
-        android:id="@+id/navigation_dashboard2"
-        android:icon="@drawable/photo_camera"
-        android:title="@string/title_dashboard" />
+
 
 </menu>
