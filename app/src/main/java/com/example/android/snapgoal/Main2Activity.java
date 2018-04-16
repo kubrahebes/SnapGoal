@@ -9,8 +9,11 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -45,6 +48,8 @@ public class Main2Activity extends AppCompatActivity {
     android.app.FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
 
+
+    private DrawerLayout mDrawerLayout;
     /* private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
              = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -89,6 +94,8 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
         ButterKnife.bind(this);
 
+
+
         //fragment ayarları
         //  final BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         // navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -115,22 +122,14 @@ public class Main2Activity extends AppCompatActivity {
 
             @Override
             public void onPageSelected(int position) {
-                switch (position) {
-                    case 0:
-
-                        break;
-                    case 1:
-
-                        break;
-
-                    case 2:
-
-
-                        break;
-                    case 3:
-
-                        break;
+            for (int i=0;i<tabbar.getTabCount();i++){
+                if (i==position){
+                 //    tabbar.getTabAt(i).getCustomView().setBackgroundColor(Color.parseColor("a02447"));
                 }
+                else {
+                    //tabbar.getTabAt(i).getCustomView().setBackgroundColor(Color.parseColor("FF4081"));
+                }
+            }
             }
 
             @Override
@@ -200,6 +199,16 @@ public class Main2Activity extends AppCompatActivity {
                 Intent intent1 = new Intent(Main2Activity.this, SettingActivity.class);
                 startActivity(intent1);
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                mDrawerLayout.openDrawer(GravityCompat.START);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 
