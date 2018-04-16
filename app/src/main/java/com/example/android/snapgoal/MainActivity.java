@@ -25,7 +25,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class Main2Activity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.viewPager)
     ViewPager viewPager;
@@ -86,7 +86,7 @@ public class Main2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
         //fragment ayarları
@@ -189,7 +189,7 @@ public class Main2Activity extends AppCompatActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.searchBtn:
-                Intent intent2 = new Intent(Main2Activity.this, LeaguesFragment.class);
+                Intent intent2 = new Intent(MainActivity.this, LeaguesFragment.class);
                 startActivity(intent2);
 
             case R.id.alarmBtn:
@@ -197,7 +197,7 @@ public class Main2Activity extends AppCompatActivity {
             case R.id.shareBtn:
                 break;
             case R.id.setBtn:
-                Intent intent1 = new Intent(Main2Activity.this, SettingActivity.class);
+                Intent intent1 = new Intent(MainActivity.this, SettingActivity.class);
                 startActivity(intent1);
         }
     }

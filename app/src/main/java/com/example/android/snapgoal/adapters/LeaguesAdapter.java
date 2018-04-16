@@ -1,4 +1,4 @@
-package com.example.android.snapgoal;
+package com.example.android.snapgoal.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.android.snapgoal.R;
 import com.example.android.snapgoal.models.Leagues;
 import com.example.android.snapgoal.models.LeaguesTeam;
 

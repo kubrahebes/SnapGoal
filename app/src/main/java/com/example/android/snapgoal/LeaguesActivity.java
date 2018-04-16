@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 
+import com.example.android.snapgoal.adapters.LeaguesAdapter;
 import com.example.android.snapgoal.models.Leagues;
 
 import java.util.ArrayList;
@@ -27,7 +28,7 @@ public class LeaguesActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent =new Intent(LeaguesActivity.this,Main2Activity.class);
+                Intent intent =new Intent(LeaguesActivity.this,MainActivity.class);
                 startActivity(intent);
             }
         }, 4000);

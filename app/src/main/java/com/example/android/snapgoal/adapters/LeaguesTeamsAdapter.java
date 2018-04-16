@@ -1,4 +1,4 @@
-package com.example.android.snapgoal;
+package com.example.android.snapgoal.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.example.android.snapgoal.R;
 import com.example.android.snapgoal.models.LeaguesTeam;
 
 import java.util.ArrayList;

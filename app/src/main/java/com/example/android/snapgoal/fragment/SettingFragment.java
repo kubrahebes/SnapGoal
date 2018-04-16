@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.example.android.snapgoal.LeaguesAdapter;
+import com.example.android.snapgoal.adapters.LeaguesAdapter;
 import com.example.android.snapgoal.R;
 import com.example.android.snapgoal.models.Leagues;
 
