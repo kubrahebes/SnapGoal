@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
@@ -115,7 +116,7 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="163dp"
+                            android:layout_height="139dp"
                             android:background="@color/colorPrimaryDark"></RelativeLayout>
 
 
@@ -124,6 +125,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="3dp"
                             android:layout_marginLeft="15dp"
+
                             android:layout_marginRight="15dp"
                             android:layout_marginTop="30dp"
                             android:background="@drawable/shape">
@@ -131,128 +133,20 @@
                             <RelativeLayout
                                 android:id="@+id/relativ5"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="10dp">
 
-                                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                                    android:id="@+id/teamAImage"
-                                    android:layout_width="82dp"
-                                    android:layout_height="82dp"
-                                    android:layout_marginLeft="10dp"
-                                    android:src="@drawable/laliga"
-                                    app:civ_border_color="@color/colorPrimaryDark"
-                                    app:civ_border_width="2dp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="67dp"
-                                    android:layout_marginTop="8dp"
-                                    android:background="@drawable/shape3"
-                                    android:padding="2dp"
-                                    android:text="11"
-                                    android:textColor="#fff"
-                                    android:textSize="12sp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_below="@+id/teamAImage"
-                                    android:layout_marginLeft="15dp"
-                                    android:layout_marginTop="5dp"
-                                    android:text="Real Madrid"
-                                    android:textColor="#111" />
-
-                                <FrameLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-
-                                    android:layout_alignParentRight="true">
-
-                                    <de.hdodenhof.circleimageview.CircleImageView
-
-                                        xmlns:app="http://schemas.android.com/apk/res-auto"
-                                        android:id="@+id/teamBImage"
-                                        android:layout_width="82dp"
-                                        android:layout_height="82dp"
-                                        android:layout_marginRight="10dp"
-
-                                        android:src="@drawable/laliga"
-                                        app:civ_border_color="@color/colorPrimaryDark"
-                                        app:civ_border_width="2dp" />
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginLeft="67dp"
-                                        android:layout_marginTop="10dp"
-                                        android:background="@drawable/shape3"
-                                        android:padding="2dp"
-                                        android:text="11"
-                                        android:textColor="#fff"
-                                        android:textSize="12sp" />
-                                </FrameLayout>
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_alignParentRight="true"
-                                    android:layout_below="@+id/teamAImage"
-                                    android:layout_marginRight="15dp"
-                                    android:layout_marginTop="5dp"
-                                    android:text="Real Madrid"
-                                    android:textColor="#111" />
-
-                                <RelativeLayout
-                                    android:id="@+id/relativ"
-                                    android:layout_width="110dp"
-                                    android:layout_height="30dp"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_marginTop="8dp"
-                                    android:background="@drawable/shape2">
-
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_centerVertical="true"
-                                        android:layout_marginLeft="15dp"
-                                        android:text="1"
-                                        android:textColor="#fff"
-                                        android:textSize="20sp" />
-
-                                    <TextView
-                                        android:id="@+id/scoreB"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_alignParentRight="true"
-                                        android:layout_centerVertical="true"
-                                        android:layout_marginRight="15dp"
-                                        android:text="1"
-                                        android:textColor="#fff"
-                                        android:textSize="20sp" />
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_centerHorizontal="true"
-                                        android:layout_marginLeft="8dp"
-                                        android:text="-"
-
-                                        android:textColor="#fff"
-                                        android:textSize="20sp" />
-
-                                </RelativeLayout>
 
                                 <TextView
                                     android:id="@+id/type"
-                                    android:layout_width="80dp"
-                                    android:layout_height="20dp"
-                                    android:layout_below="@+id/relativ"
+                                    android:layout_width="75dp"
+                                    android:layout_height="22dp"
                                     android:layout_centerHorizontal="true"
-                                    android:layout_marginTop="10dp"
+                                    android:layout_marginTop="13dp"
                                     android:background="@drawable/shape2"
                                     android:gravity="center"
-                                    android:padding="4dp"
+                                    android:padding="3dp"
                                     android:text="RUNNİNG"
                                     android:textColor="#fff"
                                     android:textSize="10sp"
@@ -267,7 +161,8 @@
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="10dp"
                                     android:text="Mon.Jan/1- 17:00"
-                                    android:textColor="#111" />
+                                    android:textColor="#111"
+                                    android:textSize="12sp" />
 
                                 <TextView
                                     android:id="@+id/matchPlace"
@@ -275,10 +170,11 @@
                                     android:layout_height="wrap_content"
                                     android:layout_below="@+id/matchDate"
                                     android:layout_centerHorizontal="true"
-                                    android:layout_marginBottom="5dp"
-                                    android:layout_marginTop="15dp"
+                                    android:layout_marginBottom="25dp"
+                                    android:layout_marginTop="0dp"
                                     android:text="Stadium Santiago Bernebeu"
-                                    android:textColor="#111" />
+                                    android:textColor="#111"
+                                    android:textSize="12sp" />
 
                             </RelativeLayout>
 
@@ -286,16 +182,26 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="53dp"
                                 android:layout_below="@+id/relativ5"
+
                                 android:layout_marginBottom="0dp">
 
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="2dp"
+                                    android:background="#eef2f4"></View>
 
                                 <android.support.design.widget.TabLayout
                                     android:id="@+id/tabbar"
                                     android:layout_width="match_parent"
-                                    android:layout_height="50dp"
+                                    android:layout_height="575dp"
                                     android:layout_below="@id/view"
-
+                                    android:clipToPadding="false"
+                                    android:elevation="15dp"
                                     android:layout_marginBottom="0dp"
+                                    android:layout_marginTop="0dp"
                                     app:layout_anchor="@+id/appbar"
                                     app:layout_anchorGravity="bottom"
                                     tools:ignore="NotSibling">
@@ -331,7 +237,120 @@
                             </RelativeLayout>
                         </RelativeLayout>
 
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp">
 
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/teamAImage"
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/laliga"
+                                app:civ_border_color="@color/colorPrimaryDark"
+                                app:civ_border_width="2dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="67dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@drawable/shape3"
+                                android:padding="2dp"
+                                android:text="11"
+                                android:textColor="#fff"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/teamAImage"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5dp"
+                                android:text="Real Madrid"
+                                android:textColor="#111" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="30dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/teamBImage"
+                                android:layout_width="72dp"
+                                android:layout_height="72dp"
+                                android:layout_marginRight="10dp"
+
+                                android:src="@drawable/laliga"
+                                app:civ_border_color="@color/colorPrimaryDark"
+                                app:civ_border_width="2dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="57dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/shape3"
+                                android:padding="2dp"
+                                android:text="11"
+                                android:textColor="#fff"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/teamBImage"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginTop="5dp"
+                                android:text="Real Madrid"
+                                android:textColor="#111" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relativ"
+                            android:layout_width="90dp"
+                            android:layout_height="35dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="13dp"
+                            android:background="@drawable/shape2">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="15dp"
+                                android:text="1"
+                                android:textColor="#fff"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/scoreB"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="15dp"
+                                android:text="1"
+                                android:textColor="#fff"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="8dp"
+                                android:text="-"
+
+                                android:textColor="#fff"
+                                android:textSize="20sp" />
+
+                        </RelativeLayout>
                     </RelativeLayout>
 
                     <android.support.v7.widget.Toolbar
@@ -353,8 +372,22 @@
         </android.support.design.widget.CoordinatorLayout>
 
     </RelativeLayout>
+    <RelativeLayout
 
+        android:id="@+id/relativBottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigation"
+            android:background="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingRight="50dp"
+            android:paddingLeft="50dp"
+            android:layout_alignParentBottom="true"
+            app:menu="@menu/navigation" />
 
+    </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>

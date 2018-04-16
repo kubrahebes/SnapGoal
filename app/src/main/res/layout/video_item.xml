@@ -35,7 +35,13 @@
                     android:layout_width="105dp"
                     android:layout_height="89dp"
                     android:background="@drawable/laliga" />
-
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_grey"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_camera" />
 
             </RelativeLayout>
 
@@ -110,7 +116,7 @@
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_alignParentRight="true"
-                        android:background="@drawable/ic_plus" />
+                        android:background="@drawable/ic_share_grey" />
                 </RelativeLayout>
 
                 <LinearLayout

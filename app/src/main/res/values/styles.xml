@@ -15,9 +15,12 @@
         <item name="colorAccent">#48adb1</item>
     </style>
     <style name="whitestyle" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">#fff</item>
-        <item name="colorPrimaryDark">#fff</item>
-        <item name="colorAccent">#fff</item>
+        <item name="colorPrimary">#eef2f4</item>
+        <item name="colorPrimaryDark">#eef2f4</item>
+        <item name="colorAccent">#eef2f4</item>
+    </style>
+    <style name="TabLayoutStyle" parent="Base.Widget.Design.TabLayout">
+        <item name="android:textSize">12sp</item>
     </style>
 
 
